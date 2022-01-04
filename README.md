@@ -24,8 +24,9 @@
 - Mobile-first workflow
 - CSS utility classes
 
+## Basic JS
 
-### What I learned
+### Return Early Pattern for functions
 
 1) the Utility Classes "gap" property to use between flex and grid elements (html customizable variable)
 
