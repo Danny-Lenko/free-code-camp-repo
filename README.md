@@ -41,7 +41,7 @@ function abTest(a, b) {
 abTest(2,2);
 ```
 
-### replace loops using recursion
+### Replace loops using recursion
 ```js
 function sum(arr, n) {
    // Only change code below this line
