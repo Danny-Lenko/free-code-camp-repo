@@ -46,31 +46,32 @@ abTest(2,2);
 ### Prevent object mutation
 ```js
   function freezeObj() {
-         const MATH_CONSTANTS = {
-            PI: 3.14
-         };
-         // Only change code below this line
-         Object.freeze(MATH_CONSTANTS);
+     const MATH_CONSTANTS = {
+        PI: 3.14
+     };
+     // Only change code below this line
+     Object.freeze(MATH_CONSTANTS);
 
-         // Only change code above this line
-         try {
-            MATH_CONSTANTS.PI = 99;
-         } catch(ex) {
-            console.log(ex);
-         }
-         return MATH_CONSTANTS.PI;
-      }
-   const PI = freezeObj();
+     // Only change code above this line
+     try {
+        MATH_CONSTANTS.PI = 99;
+     } catch(ex) {
+        console.log(ex);
+     }
+     return MATH_CONSTANTS.PI;
+  }
+  const PI = freezeObj();
 ```
 
 ### Set Default Parameters for Your Functions
 ```js
-      const increment = (number, value = 1) => number + value;
+  const increment = (number, value = 1) => number + value;
 ```
 
-### 
+### Use the Rest Parameter with Function Parameters
 ```js
-
+  const sum = (...args) => args.reduce((a, b) => a + b, 0);
+  console.log(sum(3, 4, 1))
 ```
 
 ### Continued development
