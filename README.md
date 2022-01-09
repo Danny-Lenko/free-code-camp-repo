@@ -28,17 +28,39 @@
 
 ### Return Early Pattern for functions
 
-1) the Utility Classes "gap" property to use between flex and grid elements (html customizable variable)
+```js
+// Setup
+function abTest(a, b) {
+  // Only change code below this line
+  if (a < 0 || b < 0) {
+     return
+  }
+  // Only change code above this line
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+abTest(2,2);
+```
 
-```css
-.flex {
-   display: flex;
-   gap: var(--gap, 1.6rem);
-}
-.grid {
-   display: grid;
-   gap: var(--gap, 1.6rem);
-}
+## ES 6
+
+### Prevent object mutation
+```js
+  function freezeObj() {
+         const MATH_CONSTANTS = {
+            PI: 3.14
+         };
+         // Only change code below this line
+         Object.freeze(MATH_CONSTANTS);
+
+         // Only change code above this line
+         try {
+            MATH_CONSTANTS.PI = 99;
+         } catch(ex) {
+            console.log(ex);
+         }
+         return MATH_CONSTANTS.PI;
+      }
+   const PI = freezeObj();
 ```
 
 ### Continued development
