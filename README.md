@@ -41,6 +41,30 @@ function abTest(a, b) {
 abTest(2,2);
 ```
 
+### replace loops using recursion
+```js
+function sum(arr, n) {
+   // Only change code below this line
+   if (n <= 0) {
+      return 0;
+   } else {
+      return sum(arr, n - 1) + arr[n - 1];
+   }
+   // Only change code above this line
+}
+
+console.log(sum([2, 3, 4, 5], 3));
+```
+###
+```js
+
+```
+###
+```js
+
+```
+
+
 ## ES 6
 
 ### Prevent object mutation
