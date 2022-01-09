@@ -63,6 +63,16 @@ abTest(2,2);
    const PI = freezeObj();
 ```
 
+### Set Default Parameters for Your Functions
+```js
+      const increment = (number, value = 1) => number + value;
+```
+
+### 
+```js
+
+```
+
 ### Continued development
 
 * CSS grid;
