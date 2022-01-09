@@ -55,9 +55,20 @@ function sum(arr, n) {
 
 console.log(sum([2, 3, 4, 5], 3));
 ```
-###
+### Countdown resursion
 ```js
-
+// Only change code below this line
+function countdown(n){
+   if (n <= 0) {
+      return [];
+   } else {
+      let numArr = countdown(n - 1);
+      numArr.unshift(n);
+      return numArr;
+   }
+}
+console.log(countdown(10));
+// Only change code above this line
 ```
 ###
 ```js
