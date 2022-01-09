@@ -70,11 +70,18 @@ function countdown(n){
 console.log(countdown(10));
 // Only change code above this line
 ```
-###
+### Use recursion to create range of numbers
 ```js
-
+function rangeOfNumbers(startNum, endNum) {
+   if (endNum < startNum) {
+      return [];
+   } else {
+      const numArr = rangeOfNumbers(startNum, endNum - 1);
+      numArr.push(endNum);
+      return numArr;
+   }
+};
 ```
-
 
 ## ES 6
 
