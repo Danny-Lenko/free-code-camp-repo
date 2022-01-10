@@ -116,7 +116,7 @@ function rangeOfNumbers(startNum, endNum) {
   console.log(sum(3, 4, 1))
 ```
 
-### 
+### Use Destructuring Assignment to Extract Values from Objects
 ```js
 const HIGH_TEMPERATURES = {
   yesterday: 75,
@@ -150,7 +150,24 @@ const { today, tomorrow } = HIGH_TEMPERATURES;
    const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES;
 
    // Only change code above this line
+```
 
+### Use Destructuring Assignment to Assign Variables from Nested Objects
+```js
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+
+// Only change code below this line
+  
+// const lowToday = LOCAL_FORECAST.today.low;
+// const highToday = LOCAL_FORECAST.today.high;
+
+const { today: { low: lowToday, high: highToday }} = LOCAL_FORECAST;
+
+// Only change code above this line
 ```
 
 
