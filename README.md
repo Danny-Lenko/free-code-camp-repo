@@ -255,6 +255,15 @@ console.log(carrot.name); // Should display 'carrot'
    export { uppercaseString, lowercaseString }
 ```
 
+### Reuse JavaScript Code Using import
+```js
+import { uppercaseString, lowercaseString } from './string_functions.js';  
+// Only change code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
+```
+
 
 
 
