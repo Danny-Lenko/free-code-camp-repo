@@ -116,6 +116,15 @@ function rangeOfNumbers(startNum, endNum) {
   console.log(sum(3, 4, 1))
 ```
 
+### Use the Spread Operator to Evaluate Arrays In-Place
+```js
+// var arr = [6, 89, 3, 45];
+// var maximus = Math.max.apply(null, arr);
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr);
+
+```
+
 ### Use Destructuring Assignment to Extract Values from Objects
 ```js
 const HIGH_TEMPERATURES = {
@@ -315,7 +324,7 @@ const makeServerRequest = new Promise((resolve, reject) => {
    });
 ```
 
-###
+### Handle a Rejected Promise with catch
 ```js
 const makeServerRequest = new Promise((resolve, reject) => {
   // responseFromServer is set to false to represent an unsuccessful response from a server
@@ -335,6 +344,17 @@ makeServerRequest.catch(error => {
   console.log(error);
 })
 ```
+
+## Regular Expressions
+
+### Using the Test Method
+```js
+let myString = "Hello, World!";
+let myRegex = /Hello/;
+let result = myRegex.test(myString); // Change this line
+```
+
+
 
 
 
