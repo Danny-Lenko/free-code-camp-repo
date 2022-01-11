@@ -244,6 +244,17 @@ console.log(carrot.name); // Should display 'carrot'
    temp = thermos.temperature; // 26 градусів за Цельсієм
 ```
 
+### Use export to Share a Code Block
+```js
+   const uppercaseString = (string) => {
+      return string.toUpperCase();
+   }
+   const lowercaseString = (string) => {
+      return string.toLowerCase()
+   }
+   export { uppercaseString, lowercaseString }
+```
+
 
 
 
