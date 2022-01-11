@@ -271,6 +271,35 @@ stringFunctions.uppercaseString("hello");
 stringFunctions.lowercaseString("WORLD!");
 ```
 
+### Create an Export Fallback with export default
+```js
+export default function(x, y) {
+  return x - y;
+}
+```
+
+### Import a Default Export
+```js
+import subtract from './math_functions.js';
+subtract(7,4);
+```
+
+### Complete a Promise with resolve and reject
+```js
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer represents a response from a server
+  let responseFromServer;
+    
+  if(responseFromServer) {
+    resolve('We got the data');
+  } else {  
+    reject('Data not received');
+  }
+});
+```
+
+
+
 
 
 
