@@ -368,6 +368,27 @@ let codingRegex = /coding/; // Change this line
 let result = extractStr.match(codingRegex); // Change this line
 ```
 
+### Find More Than the First Match
+```js
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /twinkle/ig; // Change this line
+let result = twinkleStar.match(starRegex); // Change this line
+```
+
+### Match Anything with Wildcard Period
+```js
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/; // Change this line
+let result = unRegex.test(exampleStr);
+```
+
+### Match Single Character with Multiple Possibilities
+```js
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi; // Change this line
+let result = quoteSample.match(vowelRegex); // Change this line
+```
+
 
 
 
