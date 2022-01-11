@@ -193,6 +193,20 @@ const half = ({max, min}) => (max + min) / 2.0;
 // Only change code above this line
 ```
 
+### Write Concise Declarative Functions with ES6
+```js
+// Only change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+```
+
 
 
 
