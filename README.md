@@ -221,9 +221,8 @@ const carrot = new Vegetable('carrot');
 console.log(carrot.name); // Should display 'carrot'
 ```
 
-### Використовуйте ґетери й сетери для Управління доступом до об'єкта
+### use getter and setter
 ```js
-   // Змініть код лише під цим рядком
    class Thermostat {
       constructor(fTemp) {
          this._fTemp = fTemp;
@@ -236,12 +235,11 @@ console.log(carrot.name); // Should display 'carrot'
          this._fTemp = newTemp * 9.0 / 5 + 32;
       }
    }
-   // Змініть код лише над цим рядком
 
-   const thermos = new Thermostat(76); // Налаштування у шкалі Фаренгейта
-   let temp = thermos.temperature; // 24.44 градусів Цельсію
+   const thermos = new Thermostat(76);
+   let temp = thermos.temperature;
    thermos.temperature = 26;
-   temp = thermos.temperature; // 26 градусів за Цельсієм
+   temp = thermos.temperature;
 ```
 
 ### Use export to Share a Code Block
@@ -262,6 +260,15 @@ import { uppercaseString, lowercaseString } from './string_functions.js';
 
 uppercaseString("hello");
 lowercaseString("WORLD!");
+```
+
+### Use * to Import Everything from a File
+```js
+import * as stringFunctions from './string_functions.js';
+// Only change code above this line
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
 ```
 
 
