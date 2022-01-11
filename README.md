@@ -221,6 +221,29 @@ const carrot = new Vegetable('carrot');
 console.log(carrot.name); // Should display 'carrot'
 ```
 
+### Використовуйте ґетери й сетери для Управління доступом до об'єкта
+```js
+   // Змініть код лише під цим рядком
+   class Thermostat {
+      constructor(fTemp) {
+         this._fTemp = fTemp;
+      }
+
+      get temperature() {
+         return 5/9 * (this._fTemp - 32);
+      }
+      set temperature(newTemp) {
+         this._fTemp = newTemp * 9.0 / 5 + 32;
+      }
+   }
+   // Змініть код лише над цим рядком
+
+   const thermos = new Thermostat(76); // Налаштування у шкалі Фаренгейта
+   let temp = thermos.temperature; // 24.44 градусів Цельсію
+   thermos.temperature = 26;
+   temp = thermos.temperature; // 26 градусів за Цельсієм
+```
+
 
 
 

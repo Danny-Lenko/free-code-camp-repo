@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Використовуйте ґетери й сетери для Управління доступом до об'єкта</title>
+   <script>
+      // Змініть код лише під цим рядком
+      class Thermostat {
+         constructor(fTemp) {
+            this._fTemp = fTemp;
+         }
+
+         get temperature() {
+            return 5/9 * (this._fTemp - 32);
+         }
+         set temperature(newTemp) {
+            this._fTemp = newTemp * 9.0 / 5 + 32;
+         }
+      }
+      // Змініть код лише над цим рядком
+
+      const thermos = new Thermostat(76); // Налаштування у шкалі Фаренгейта
+      let temp = thermos.temperature; // 24.44 градусів Цельсію
+      thermos.temperature = 26;
+      temp = thermos.temperature; // 26 градусів за Цельсієм
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
