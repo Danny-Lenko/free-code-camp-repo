@@ -420,6 +420,21 @@ let result = difficultSpelling.match(myRegex);
 console.log(result)
 ```
 
+### Match Characters that Occur Zero or More Times
+```js
+// Only change code below this line
+let chewieRegex = /Aa*/; // Change this line
+// Only change code above this line
+let result = chewieQuote.match(chewieRegex);
+```
+
+### Find Characters with Lazy Matching
+```js
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/; // Change this line
+let result = text.match(myRegex);
+```
+
 
 
 
