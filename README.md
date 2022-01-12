@@ -389,6 +389,12 @@ let vowelRegex = /[aeiou]/gi; // Change this line
 let result = quoteSample.match(vowelRegex); // Change this line
 ```
 
+### Match Letters of the Alphabet
+```js
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi; // Change this line
+let result = quoteSample.match(alphabetRegex); // Change this line
+```
 
 
 
