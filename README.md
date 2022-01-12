@@ -435,6 +435,11 @@ let myRegex = /<.*?>/; // Change this line
 let result = text.match(myRegex);
 ```
 
+### Find One or More Criminals in a Hunt
+```js
+let reCriminals = /C+/; // Change this line
+```
+
 
 
 
