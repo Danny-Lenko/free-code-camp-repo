@@ -412,6 +412,14 @@ let result = quoteSample.match(myRegex); // Change this line
 console.log(result);
 ```
 
+### Match Characters that Occur One or More Times
+```js
+let difficultSpelling = "Mississippi";
+let myRegex = /s+/ig; // Change this line
+let result = difficultSpelling.match(myRegex);
+console.log(result)
+```
+
 
 
 
