@@ -551,6 +551,13 @@ let result = pwRegex.test(sampleWord);
    // After passing the challenge experiment with myString and see how the grouping works
 ```
 
+### Reuse Patterns Using Capture Groups
+```js
+   let repeatNum = "42 42 42";
+   let reRegex = /^(\d*)(\s)\1\2\1$/; // Change this line
+   let result = reRegex.test(repeatNum);
+```
+
 
 
 
