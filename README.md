@@ -515,11 +515,18 @@ let ohRegex = /Oh{3,6}\sno/; // Change this line
 let result = ohRegex.test(ohStr);
 ```
 
-###
+### Specify only the Lower Number of Matches
 ```js
 let haStr = "Hazzzzah";
 let haRegex = /Haz{4,}ah/; // Change this line
 let result = haRegex.test(haStr);
+```
+
+### Specify Exact Number of Matches
+```js
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; // Change this line
+let result = timRegex.test(timStr);
 ```
 
 
