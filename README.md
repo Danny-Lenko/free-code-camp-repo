@@ -566,6 +566,13 @@ let result = pwRegex.test(sampleWord);
    let result = str.replace(fixRegex, replaceText);
 ```
 
+### Remove Whitespace from Start and End
+```js
+   let hello = "   Hello, World!  ";
+   let wsRegex = /^\s+|\s+$/g; // Change this line
+   let result = hello.replace(wsRegex, ''); // Change this line
+```
+
 
 
 
