@@ -508,6 +508,13 @@ let countNonWhiteSpace = /\S/g; // Change this line
 let result = sample.match(countNonWhiteSpace);
 ```
 
+### Specify Upper and Lower Number of Matches
+```js
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/; // Change this line
+let result = ohRegex.test(ohStr);
+```
+
 
 
 
