@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function factorialize(num) {
+         let newNum = num;
+         let i = 0;
+         num = 1;
+         do {
+            i++;
+            num = num * i;
+         } while(i < newNum);
+         return num;
+      }
+      console.log(factorialize(10));
+
+      // tail recursion
+      function factorialize(num, factorial = 1) {
+         if (num === 0) {
+            return factorial;
+         } else {
+            return factorialize(num - 1, factorial * num);
+         }
+      }
+      factorialize(5);
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
