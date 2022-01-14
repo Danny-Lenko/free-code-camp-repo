@@ -653,24 +653,12 @@ console.log(spreadOut());
 
 ### Check if an Object has a Property
 ```js
-   let users = {
-   Alan: {
-      age: 27,
-      online: true
-   },
-   Jeff: {
-      age: 32,
-      online: true
-   },
-   Sarah: {
-      age: 48,
-      online: true
-   },
-   Ryan: {
-      age: 19,
-      online: true
-   }
-   };
+let users = {
+  Alan: { age: 27, online: false },
+  Jeff: { age: 32, online: true },
+  Sarah: { age: 48, online: false },
+  Ryan: { age: 19, online: true }
+};
    function isEveryoneHere(userObj) {
       // Only change code below this line
       return 'Alan' in userObj 
@@ -685,15 +673,9 @@ console.log(spreadOut());
 ### Iterate Through the Keys of an Object with a for...in Statement
 ```js
 const users = {
-  Alan: {
-    online: false
-  },
-  Jeff: {
-    online: true
-  },
-  Sarah: {
-    online: false
-  }
+  Alan: { online: false },
+  Jeff: { online: true },
+  Sarah: { online: false }
 }
 function countOnline(usersObj) {
   // Only change code below this line
@@ -712,22 +694,10 @@ console.log(countOnline(users));
 ### Generate an Array of All Object Keys with Object.keys()
 ```js
 let users = {
-  Alan: {
-    age: 27,
-    online: false
-  },
-  Jeff: {
-    age: 32,
-    online: true
-  },
-  Sarah: {
-    age: 48,
-    online: false
-  },
-  Ryan: {
-    age: 19,
-    online: true
-  }
+  Alan: { age: 27, online: false },
+  Jeff: { age: 32, online: true },
+  Sarah: { age: 48, online: false },
+  Ryan: { age: 19, online: true }
 };
 function getArrayOfUsers(obj) {
   // Only change code below this line
