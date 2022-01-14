@@ -573,6 +573,8 @@ let result = pwRegex.test(sampleWord);
    let result = hello.replace(wsRegex, ''); // Change this line
 ```
 
+## Basic Data Structures
+
 ### Remove Items Using splice()
 ```js
 const arr = [2, 4, 5, 1, 7, 5, 2, 1];
@@ -603,6 +605,22 @@ function forecast(arr) {
 }
 // Only change code above this line
 console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+```
+
+### Copy an Array with the Spread Operator
+```js
+   function copyMachine(arr, num) {
+   let newArr = [];
+   while (num >= 1) {
+      // Only change code below this line
+      newArr.push([...arr])
+      // Only change code above this line
+      num--;
+   }
+   return newArr;
+   }
+
+   console.log(copyMachine([true, false, true], 2));
 ```
 
 
