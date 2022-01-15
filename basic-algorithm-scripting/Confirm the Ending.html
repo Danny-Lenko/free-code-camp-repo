@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function confirmEnding(str, target) {
+         let ending = target + '$';
+         let regEx = new RegExp(ending, 'g');
+         let result = regEx.test(str)
+         return result;
+      }
+      console.log(confirmEnding("Bastian", "n"));
+
+      // solution given
+      function confirmEnding(str, target) {
+         return str.slice(str.length - target.length) === target;
+      }
+      confirmEnding("He has to give me a new name", "name");
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

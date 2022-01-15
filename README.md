@@ -729,6 +729,17 @@ function largestOfFour(arr) {
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
 ```
 
+### Confirm the Ending
+```js
+function confirmEnding(str, target) {
+  let ending = target + '$';
+  let regEx = new RegExp(ending, 'g');
+  let result = regEx.test(str)
+  return result;
+}
+console.log(confirmEnding("Bastian", "n"));
+```
+
 
 
 
