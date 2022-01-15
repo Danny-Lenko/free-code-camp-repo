@@ -707,6 +707,28 @@ function getArrayOfUsers(obj) {
 console.log(getArrayOfUsers(users));
 ```
 
+## Basic Algorithm Scripting
+
+### Return Largest Numbers in Arrays
+```js
+function largestOfFour(arr) {
+  let arrSearched = [];
+  for (let i = 0; i < arr.length; i++) {
+    let subArr = arr[i];
+    let biggestNum = Number.NEGATIVE_INFINITY;
+    for (let j = 0; j < subArr.length; j++) {
+      if (subArr[j] > biggestNum) {
+        biggestNum = subArr[j];
+      }
+    }
+    arrSearched.push(biggestNum);
+  }
+  console.log(arrSearched);
+  return arrSearched;
+}
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+```
+
 
 
 
