@@ -754,7 +754,7 @@ function findElement(arr, func) {
 console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
 ```
 
-### Add Items Using splice()
+### Title Case a Sentence
 ```js
       function titleCase(str) {
          str = str.toLowerCase();
