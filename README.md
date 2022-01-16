@@ -754,6 +754,30 @@ function findElement(arr, func) {
 console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
 ```
 
+### Add Items Using splice()
+```js
+      function titleCase(str) {
+         str = str.toLowerCase();
+         let spaceIndexArr = [0];
+         let regex = /[a-z\s']/g;
+         let wordsArr = str.match(regex);
+         for (let i = 0; i < str.length; i++) {
+            if (str[i] === ' ') {
+               spaceIndexArr.push(str.indexOf(' ', i) + 1);
+            }
+         }
+         str = '';
+         for (let i = 0; i < spaceIndexArr.length; i++) {
+            wordsArr[spaceIndexArr[i]] = wordsArr[spaceIndexArr[i]].toUpperCase();
+         }
+         for (let i = 0; i < wordsArr.length; i++) {
+            str += wordsArr[i];
+         }
+         return str;
+      }
+      titleCase("I'm a little tea pot");
+```
+
 
 
 
@@ -773,6 +797,8 @@ console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
 ### Useful resources
 
 - [Array.prototype.reduce()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) - Helped me understand the reduce() method;
+- [String.prototype.indexOf()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) - this helped me cope with the Title Case a Sentence task;
+
 
 - [Git + GitHub](https://www.youtube.com/watch?v=RGOj5yH7evk) - the basic git commands (Youtube).
 - [The Markdown Guide](https://www.markdownguide.org/) - for more help with writing markdown (Article).
