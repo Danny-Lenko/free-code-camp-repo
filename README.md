@@ -778,6 +778,27 @@ console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
       titleCase("I'm a little tea pot");
 ```
 
+## Object Oriented Programming
+
+### Iterate Over All Properties
+```js
+function Dog(name) {
+  this.name = name;
+}
+Dog.prototype.numLegs = 4;
+let beagle = new Dog("Snoopy");
+let ownProps = [];
+let prototypeProps = [];
+// Only change code below this line
+for (let prop in beagle) {
+  if (beagle.hasOwnProperty(prop)) {
+    ownProps.push(prop);
+  } else {
+    prototypeProps.push(prop);
+  }
+}
+```
+
 
 
 
