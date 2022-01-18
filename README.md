@@ -998,6 +998,28 @@ const newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies'
 const newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
 ```
 
+### Use the map Method to Extract Data from an Array
+```js
+// The global variable
+const watchList = [
+  {
+    "Title": "Batman Begins",
+    "Year": "2005",
+    "imdbRating": "8.3",
+  },
+  {
+    "Title": "Avatar",
+    "Year": "2009",
+    "imdbRating": "7.9",
+  }
+];
+// Only change code below this line
+const ratings = [];
+watchList.map(movie => ratings.push({title: movie['Title'], rating: movie['imdbRating']}));
+// Only change code above this line
+console.log(JSON.stringify(ratings));
+```
+
 
 
 
