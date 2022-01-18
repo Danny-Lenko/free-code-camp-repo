@@ -1039,6 +1039,41 @@ const new_s = s.myMap(function(item) {
 console.log(new_s);
 ```
 
+### Use the filter Method to Extract Data from an Array
+```js
+// The global variable
+const watchList = [
+  {
+    "Title": "Inception",
+    "imdbRating": "8.8",
+  },
+  {
+    "Title": "Interstellar",
+    "imdbRating": "8.6",
+  },
+  {
+    "Title": "The Dark Knight",
+    "imdbRating": "9.0",
+  },
+  {
+    "Title": "Batman Begins",
+    "imdbRating": "8.3",
+  },
+  {
+    "Title": "Avatar",
+    "imdbRating": "7.9",
+  }
+];
+// Only change code below this line
+const filteredObjList = watchList.filter(movie => Number(movie['imdbRating']) > 8);
+const filteredList = filteredObjList.map(movie => ({
+  title: movie['Title'],
+  rating: movie['imdbRating']
+  }));
+// Only change code above this line
+console.log(filteredList);
+```
+
 
 
 
