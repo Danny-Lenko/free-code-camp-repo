@@ -1104,6 +1104,48 @@ const inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
 nonMutatingSplice(inputCities);
 ```
 
+### Use the reduce Method to Analyze Data
+```js
+// The global variable
+const watchList = [
+  {
+    "Title": "Inception",
+    "Director": "Christopher Nolan",
+    "imdbRating": "8.8",
+  },
+  {
+    "Title": "Interstellar",
+    "Director": "Christopher Nolan",
+    "imdbRating": "8.6",
+  },
+  {
+    "Title": "The Dark Knight",
+    "Director": "Christopher Nolan",
+    "imdbRating": "9.0",
+  },
+  {
+    "Title": "Batman Begins",
+    "Director": "Christopher Nolan",
+    "imdbRating": "8.3",
+  },
+  {
+    "Title": "Avatar",
+    "Director": "James Cameron",
+    "imdbRating": "7.9",
+  }
+];
+
+function getRating(watchList) {
+  let filteredList = watchList.filter(movie => movie['Director'] === 'Christopher Nolan');
+  filteredList = filteredList.map(movie => ({
+    title: movie['Title'],
+    rating: +movie['imdbRating']
+  }));
+  let averageRating = filteredList.reduce((ratingSum, movie) => ratingSum + movie.rating / filteredList.length, 0)
+  return averageRating;
+}
+console.log(getRating(watchList));
+```
 
 
 
