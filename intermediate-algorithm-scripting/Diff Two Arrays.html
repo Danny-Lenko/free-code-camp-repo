@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function diffArray(arr1, arr2) {
+         const newArr = [];
+         const biggestArr = (arr1.length - arr2.length) < 0 ? arr2.length : arr1.length;
+
+         for (let i = 0; i < biggestArr; i++) {
+            if (arr1.indexOf(arr2[i]) < 0 && arr2[i]) {
+               newArr.push(arr2[i]);
+            }
+            if (arr2.indexOf(arr1[i]) < 0 && arr1[i]) {
+               newArr.push(arr1[i]);
+            }
+         }
+         return newArr;
+      }
+
+      diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
