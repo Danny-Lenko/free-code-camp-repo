@@ -1175,6 +1175,16 @@ function sentensify(str) {
 console.log(sentensify("May-the-force-be-with-you"));
 ```
 
+### Use the every Method to Check that Every Element in an Array Meets a Criteria
+```js
+function checkPositive(arr) {
+  return arr.every(function(value) {
+    return value >= 0;
+  })
+}
+checkPositive([1, 2, 3, -4, 5]);
+```
+
 
 
 
