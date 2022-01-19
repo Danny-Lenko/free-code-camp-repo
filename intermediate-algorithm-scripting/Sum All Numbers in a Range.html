@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function sumAll(arr) {
+         arr = arr.sort(function(a, b) {
+            return a - b;
+         });
+
+         function extendArr(n, m) {
+            if (m < n) {
+               return [];
+            } else {
+               const countArr = extendArr(n, m - 1);
+               countArr.push(m);
+               return countArr;
+            }
+         }
+         arr = extendArr(arr[0], arr[1]);
+
+         function sumElements(arr, n) {
+            if (n <= 0) {
+               return 0;
+            } else {
+               return sumElements(arr, n - 1) + arr[n - 1];
+            }
+         }
+
+         return sumElements(arr, arr.length);
+      }
+
+      console.log(sumAll([5, 10]));
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
