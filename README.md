@@ -1195,6 +1195,22 @@ function checkPositive(arr) {
 checkPositive([1, 2, 3, -4, 5]);
 ```
 
+### Introduction to Currying and Partial Application
+```js
+function add(x) {
+  return function(y) {
+    return function(z) {
+      return x + y + z;
+    }
+  }
+}
+const xExpectsY = add(10);
+const xyExpectsZ = xExpectsY(20);
+const xyzExpects = xyExpectsZ(30);
+console.log(xyzExpects);
+// add(10)(20)(30);
+```
+
 
 
 
