@@ -7,15 +7,24 @@
    <title>Gold Code</title>
    <script>
       // Only change code below this line
-function urlSlug(title) {
-  title = title.toLowerCase();
-  title = title.trim();
-  title = title.split(/[\s]+/);
-  title = title.join('-');
-  console.log(title);
 
-  return title;
-}
+      function urlSlug(title) {
+         return title
+            .toLowerCase()
+            .split(' ')
+            .filter(word => word !== '')
+            .join('-')
+      }
+
+// function urlSlug(title) {
+//   title = title.toLowerCase();
+//   title = title.trim();
+//   title = title.split(/[\s]+/);
+//   title = title.join('-');
+//   console.log(title);
+
+//   return title;
+// }
 // Only change code above this line
 console.log(urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone"));
    </script>
