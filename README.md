@@ -1157,6 +1157,14 @@ function alphabeticalOrder(arr) {
 console.log(alphabeticalOrder(["a", "d", "c", "a", "z", "g"]));
 ```
 
+### Split a String into an Array Using the split Method
+```js
+function splitify(str) {
+  return str.split(/[^a-zA-Z]/)
+}
+console.log(splitify("Hello World,I-am code"));
+```
+
 
 
 
