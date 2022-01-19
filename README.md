@@ -1165,6 +1165,16 @@ function splitify(str) {
 console.log(splitify("Hello World,I-am code"));
 ```
 
+### Combine an Array into a String Using the join Method
+```js
+function sentensify(str) {
+  str = str.split(/[^a-zA-Z]/);
+  console.log(str);
+  return str.join(' ');
+}
+console.log(sentensify("May-the-force-be-with-you"));
+```
+
 
 
 
