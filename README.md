@@ -1230,6 +1230,8 @@ console.log(xyzExpects);
 
 - [Array.prototype.reduce()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) - Helped me understand the reduce() method;
 - [String.prototype.indexOf()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) - this helped me cope with the Title Case a Sentence task;
+- [arguments object](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/arguments) - Seek and destroy (intermediate algorithm scripting) task related article;
+- [rest parameters](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) - Seek and destroy (intermediate algorithm scripting) task related article;
 
 
 - [Git + GitHub](https://www.youtube.com/watch?v=RGOj5yH7evk) - the basic git commands (Youtube).
