@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function translatePigLatin(str) {
+         const vowelRegex = /^[aeiou]/ig;
+         const vowelTest = vowelRegex.test(str);
+         const consonantRegex = /.+?[aeiou]/;
+         const consonantMatch = str.match(consonantRegex);
+
+         if (vowelTest) {
+            str = str + "way";
+            return str
+         } else if (!consonantMatch) {
+            str = str + 'ay';
+            return str;
+         } else {
+            const firstConsonants = consonantMatch[0].slice(0, consonantMatch[0].length - 1);
+            const replaceRegex = new RegExp(firstConsonants);
+            str = str.replace(replaceRegex, '');
+            str = str + firstConsonants + 'ay'
+            return str
+         } 
+      }
+
+      console.log(translatePigLatin("schwartz"));
+      console.log(translatePigLatin("eight"));
+      console.log(translatePigLatin("rhythm"));
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
