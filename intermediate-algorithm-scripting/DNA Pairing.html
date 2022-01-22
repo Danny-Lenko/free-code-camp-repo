@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function pairElement(str) {
+         str = str.split('');
+         for (let i = 0; i < str.length; i++) {
+            switch(str[i]) {
+               case 'G':
+               str[i] += 'C';
+               break;
+               case 'C':
+               str[i] += 'G';
+               break;
+               case 'A':
+               str[i] += 'T';
+               break;
+               case 'T':
+               str[i] += 'A';
+               break;
+               default:
+               console.log("everything's fine");
+            }
+
+            str[i] = str[i].split('');
+         }
+         
+         console.log(str);
+         return str;
+      }
+
+      pairElement("GCG");
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
