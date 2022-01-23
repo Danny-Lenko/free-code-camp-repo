@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function convertHTML(str) {
+         const criminals = ['&', '<', '>', '"', "'"];
+         str = str.split('');
+         let criminalIndexes = [];
+         for (let criminal of criminals) {
+            const idx = str.indexOf(criminal);
+            while (idx != -1) {
+               criminalIndexes.push(idx);
+               idx = str.indexOf(criminal, idx + 1);
+            }
+         }
+
+         for (let index of criminalIndexes) {
+            switch(str[index]) {
+               case '&':
+               str[index] = '&amp;';
+               break;
+               case '<':
+               str[index] = '&lt;';
+               break;
+               case '>':
+               str[index] = '&gt;';
+               break;
+               case '"':
+               str[index] = '&quot;';
+               break;
+               case "'":
+               str[index] = '&apos;'
+               break;
+               default:
+               console.log('Ok');
+            }
+         }
+         str = str.join('');
+         return str;
+      }
+
+      convertHTML("Dolce & Gabbana");
+      convertHTML("Hamburgers < Pizza < Tacos");
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
