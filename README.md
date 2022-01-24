@@ -1233,6 +1233,7 @@ console.log(xyzExpects);
 - [arguments object](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/arguments) - Seek and destroy (intermediate algorithm scripting) task related article;
 - [rest parameters](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters) - Seek and destroy (intermediate algorithm scripting) task related article;
 - [Array.prototype.flat()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) - learned to flatten arrays, or to get rid of nested arrays, in other words.
+- [push & ternary oper](https://stackoverflow.com/questions/60426449/array-push-with-ternary-operator) - the article raises a question about using the ternary operator within the push method and answers why it is not the coziest couple.
 
 
 - [Git + GitHub](https://www.youtube.com/watch?v=RGOj5yH7evk) - the basic git commands (Youtube).
