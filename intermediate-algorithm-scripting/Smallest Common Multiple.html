@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function smallestCommons(arr) {
+         arr.sort(function(a, b) {
+            return a - b;
+         });
+         let newArr = [];
+         for (let i = arr[0]; i <= arr[1]; i++) {
+            newArr.push(i);
+         }
+
+         let resultsArr = [];
+         let n = arr[1];
+         do {
+            resultsArr = [];
+            n++;
+            for (let i = 0; i < newArr.length; i++) {
+               resultsArr.push(n % newArr[i]);
+            }
+         } while (resultsArr.some(function(currentValue) {
+         return currentValue !== 0;
+         }))
+
+         return n;
+      }
+
+      console.log(smallestCommons([1, 13]));
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
