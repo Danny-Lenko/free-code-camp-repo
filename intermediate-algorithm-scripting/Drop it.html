@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function dropElements(arr, func) {
+         let upperValue = [];
+         let findTruth = false;
+         for (let i = 0; i < arr.length; i++) {
+            findTruth = func(arr[i]);
+            if (findTruth) {
+               upperValue.push(arr[i]);
+            }
+         }
+
+         arr = (upperValue[0]) ? arr.slice(arr.indexOf(upperValue[0]), arr.length) : [];
+         return arr;
+      }
+      console.log(dropElements([1, 2, 3, 7, 4], function(n) {return n > 3;}));
+      console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}));
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
