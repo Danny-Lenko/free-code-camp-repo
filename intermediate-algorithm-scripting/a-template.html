@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function sumFibs(num) {
+         let arr = [1, 1];
+         let lastValue = 0;
+         do {
+            lastValue = arr[arr.length-1] + arr[arr.length-2];
+            if (lastValue <= num) {
+               arr.push(lastValue);
+            }
+         } while (lastValue < num);
+
+         arr = arr.filter(num => num % 2);
+         num = arr.reduce((a,b) => a + b, 0);
+         
+         return num;
+      }
+
+      console.log(sumFibs(10));
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
