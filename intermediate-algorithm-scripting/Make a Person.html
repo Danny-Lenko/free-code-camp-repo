@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      const Person = function(firstAndLast) {
+         // Only change code below this line
+         // Complete the method below and implement the others similarly
+         this.getFirstName = function() {
+            return firstAndLast
+               .split(' ')[0];
+         };
+         this.getLastName = function() {
+            return firstAndLast
+               .split(' ')[1];
+         };
+         
+         this.getFullName = function() {
+            return firstAndLast;
+         };
+         
+         this.setFirstName = function(first) {
+            let nameArr = firstAndLast.split(' ');
+            nameArr[0] = first;
+            firstAndLast = nameArr.join(' ');
+            return firstAndLast;
+               
+         }
+         this.setLastName = function(last) {
+            let nameArr = firstAndLast.split(' ');
+            nameArr[1] = last;
+            firstAndLast = nameArr.join(' ');
+            return firstAndLast;
+         }
+         this.setFullName = function(firstAndLast) {
+            let nameArr = firstAndLast.split(' ');
+            this.setFirstName(nameArr[0]);
+            this.setLastName(nameArr[1]);
+         }
+
+         return firstAndLast;
+      };
+
+      const bob = new Person('Bob Ross');
+      bob.getFullName();
+
+      console.log(bob.setFullName('Haskell Curry'));
+      console.log(bob.getFullName());
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
