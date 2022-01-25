@@ -7,7 +7,7 @@
    <title>Gold Code</title>
    <script>
       function whatIsInAName(collection, source) {
-         arr = collection.filter(object => Object.keys(source).every(key => object[key] === source[key])) ;
+         const arr = collection.filter(object => Object.keys(source).every(key => object[key] === source[key])) ;
          return arr;
       }
 
