@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function orbitalPeriod(arr) {
+         const GM = 398600.4418;
+         const earthRadius = 6367.4447;
+
+         arr = arr.map(item => ({
+            name: item['name'],
+            orbitalPeriod: Math.round(2*Math.PI*Math.sqrt(Math.pow((earthRadius+item['avgAlt']), 3)/GM))
+         }))
+
+         console.log(arr)
+         return arr;
+      }
+
+      orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+      orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]);
+
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
