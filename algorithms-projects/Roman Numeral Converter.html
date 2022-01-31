@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function convertToRoman(num) {
+         num += '';
+         num = num.split('');
+         num = num.reverse();
+         num = num.map(Number);
+         let thousands = [];
+
+         for (let i = 0; i < num.length; i++) {
+
+            if (num[3]) {
+               for (let m = 0; m < num[3]; m++) {
+               thousands.push('M');
+               }
+               num[3] = thousands.join('');
+            }
+
+            if (num[2]) {
+               switch (num[2]) {
+               case 9: num[2] = 'CM'; break;
+               case 8: num[2] = 'DCCC'; break;
+               case 7: num[2] = 'DCC'; break;
+               case 6: num[2] = 'DC'; break;
+               case 5: num[2] = 'D'; break;
+               case 4: num[2] = 'CD'; break;
+               case 3: num[2] = 'CCC'; break;
+               case 2: num[2] = 'CC'; break;
+               case 1: num[2] = 'C'; break;
+               case 0: num[2] = ''; break;
+               // default: console.log('no such value');
+               }
+            }
+
+            if (num[1]) {
+               switch (num[1]) {
+               case 9: num[1] = 'XC'; break;
+               case 8: num[1] = 'LXXX'; break;
+               case 7: num[1] = 'LXX'; break;
+               case 6: num[1] = 'LX'; break;
+               case 5: num[1] = 'L'; break;
+               case 4: num[1] = 'XL'; break;
+               case 3: num[1] = 'XXX'; break;
+               case 2: num[1] = 'XX'; break;
+               case 1: num[1] = 'X'; break;
+               case 0: num[1] = ''; break;
+               // default: console.log('no such value');
+               }
+            }
+
+            switch(num[0]) {
+               case 9: num[0] = 'IX'; break;
+               case 8: num[0] = 'VIII'; break;
+               case 7: num[0] = 'VII'; break;
+               case 6: num[0] = 'VI'; break;
+               case 5: num[0] = 'V'; break;
+               case 4: num[0] = 'IV'; break;
+               case 3: num[0] = 'III'; break;
+               case 2: num[0] = 'II'; break;
+               case 1: num[0] = 'I'; break;
+               case 0: num[0] = ''; break;
+               // default: console.log('no such value');
+            }
+         }
+
+         num.reverse();
+         num = num.join('');
+         const regex = /[^0]/ig;
+         num = num.match(regex);
+         num = num.join('');
+
+         return num;
+      }
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
