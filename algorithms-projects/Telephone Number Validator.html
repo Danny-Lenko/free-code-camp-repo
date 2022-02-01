@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+    <script>
+      function telephoneCheck(str) {
+        const regex = /[0-9()]/g;
+        const strMatch = str.match(regex);
+        const strNums = strMatch.map(Number);
+
+        if (str[0] === '-' || str[2] === ' ') {
+          return false;
+        }
+
+        for (let i = 0; i < strMatch.length; i++) {
+          if (strMatch.length === 10 && typeof strNums[i] === 'number') {
+            return true;
+          }
+        }
+
+        if (strMatch.length === 12 && strMatch[0] === '(' && strMatch[4] === ')') {
+            return true;
+        } else if (strMatch.length === 13 && strMatch[0] === '1' && strMatch[1] === '(' && strMatch[5] === ')') {
+          return true;
+        } else if (strMatch.length === 11 && strMatch[0] === '1') {
+          return true;
+        }
+
+        return false;
+      }
+
+      telephoneCheck("-1 (757) 622-7382");
+    </script>
+</head>
+<body>
+   
+</body>
+</html>
