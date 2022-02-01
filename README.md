@@ -1235,7 +1235,9 @@ console.log(xyzExpects);
 - [Array.prototype.flat()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) - learned to flatten arrays, or to get rid of nested arrays, in other words.
 - [push & ternary oper](https://stackoverflow.com/questions/60426449/array-push-with-ternary-operator) - the article raises a question about using the ternary operator within the push method and answers why it is not the coziest couple.
 - [splice & ternary oper](https://stackoverflow.com/questions/48435789/splicing-doesnt-work-in-ternary-conditional) - this helped me implement the ternary operator syntax in the "Drop it task from intermediate algorithms".
-- [Array.prototype.map()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map) - put here because of the example about how to turn string elements of an array to numbers. 
+- [Array.prototype.map()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map) - put here because of the example about how to turn string elements of an array to numbers.
+- [if two arrays equal](https://stackoverflow.com/a/19746771/16906724) - There is an answer on how to compare arrays;
+
 
 
 - [Git + GitHub](https://www.youtube.com/watch?v=RGOj5yH7evk) - the basic git commands (Youtube).
