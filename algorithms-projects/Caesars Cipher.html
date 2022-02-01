@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+      function rot13(str) {
+         const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+         const strIndexes = [];
+
+         str = str.split('');
+
+         for (let i = 0; i < str.length; i++) {
+            strIndexes.push(alphabet.indexOf(str[i]));
+            if (alphabet.indexOf(str[i]) >= 0) {
+               str[i] = alphabet[strIndexes[i] + 13];
+               if (strIndexes[i] + 13 >= 26) {
+                  str[i] = alphabet[strIndexes[i] + 13 - 26]
+               }
+            }
+         }
+         str = str.join('');
+
+         return str;
+      }
+
+      console.log(rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT."));
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
