@@ -6,15 +6,23 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Gold Code</title>
    <style type='text/scss'>
-      $text-color: red;
-   
-      .header {
-         text-align: center;
+
+      @mixin border-radius($radius) {
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+        border-radius: $radius;
       }
-      .blog-post, h2 {
-         color: $text-color;
+    
+      #awesome {
+        width: 150px;
+        height: 150px;
+        background-color: green;
+        @include border-radius(15px);
       }
-  </style>
+    </style>
+    
+    <div id="awesome"></div>
 </head>
 <body>
    
