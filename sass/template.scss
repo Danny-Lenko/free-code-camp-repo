@@ -1,0 +1,54 @@
+@mixin border-radius($radius) {
+   -webkit-border-radius: $radius;
+   -moz-border-radius: $radius;
+   -ms-border-radius: $radius;
+   border-radius: $radius;
+ }
+
+ @mixin border-stroke($val) {
+    @if $val == light {
+       border: 1px solid black;
+    }
+    @else if $val == medium {
+       border: 3px solid black;
+    }
+    @else if $val == heavy {
+       border: 6px solid black;
+    }
+    @else {
+       border: none;
+    }
+ }
+
+ @for $i from 1 to 6 {
+  .text-#{$i} {font-size: 15px * $i}
+ }
+
+ @each $color in blue, black, red {
+    .#{$color}-bg {background-color: $color};
+ }
+
+ $x: 1;
+ @while $x < 6 {
+    .text-#{$x} { font-size: 15px * $x; }
+    $x: $x + 1;
+ }
+
+
+ .info{
+    width: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+ }
+ .info-important {
+    @extend .info;
+    background-color: magenta;
+ }
+
+
+ #awesome {
+   width: 150px;
+   height: 150px;
+   background-color: green;
+   @include border-radius(15px);
+ }
