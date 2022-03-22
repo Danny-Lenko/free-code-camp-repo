@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+class CampSite extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <Camper/>
+      </div>
+    );
+  }
+};
+// Change code below this line
+
+class Camper extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return ( 
+      <div>
+        <p>{this.props.name}</p>
+      </div>
+    )
+  }
+}
+
+Camper.defaultProps = { name: 'CamperBot' };
+Camper.propTypes = { name: PropTypes.string.isRequired };
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
