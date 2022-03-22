@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Gold Code</title>
+   <script>
+class ControlledInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: ''
+    };
+    // Change code below this line
+    this.handleChange = this.handleChange.bind(this)
+    // Change code above this line
+  }
+  // Change code below this line
+  handleChange(event) {
+    const userInput = event.target.value
+    this.setState({
+      input: userInput
+    })
+  }
+  // Change code above this line
+  render() {
+    return (
+      <div>
+        { /* Change code below this line */}
+        <input value = {this.state.input} onChange={this.handleChange}></input>
+        { /* Change code above this line */}
+        <h4>Controlled Input:</h4>
+        <p>{this.state.input}</p>
+      </div>
+    );
+  }
+};
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
