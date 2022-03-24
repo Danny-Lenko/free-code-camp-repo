@@ -16,7 +16,7 @@ const frontEndFrameworks = [
 ];
 
 function Frameworks() {
-  const renderFrameworks = frontEndFrameworks.map((item, index) => <li key={item.slice(0,2).toLowerCase}>{item}</li>); // Change this line
+  const renderFrameworks = frontEndFrameworks.map((item, index) => <li key={index}>{item}</li>); // Change this line
   return (
     <div>
       <h1>Popular Front End JavaScript Frameworks</h1>
